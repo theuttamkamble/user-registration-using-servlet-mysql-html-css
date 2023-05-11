@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>User Registration</title>
+		<style type="text/css">
+			.t1 {
+				width: 400px;
+				border: 2px solid green;
+				align-content: center;
+				align-self: auto;
+				padding: 10px;
+				background-color: white;
+			}
+			
+			.t2 {
+				width: 50%;
+				border: 2px solid red;
+				align-content: center;
+				align-self: auto;
+				padding: 10px;
+				background-color: azure;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<br />
+		<br />
+		<table align="center" class="t2" border="0" cellspacing="0">
+			<tr>
+				<td><br />
+				<br />
+						<form action="updateuser" method="get">
+						<table align="center" class="t1" border="0" cellspacing="0"
+							cellpadding="7">
+							<tr>
+								<td align="center" bgcolor="red"
+									style="background-color: #00CC00; font-size: 24px; color: white; font-family: Consolas"
+									colspan="3">Update User</td>
+							</tr>
+	
+							<tr>
+								<td>Name:</td>
+								<td><input type="text" name="name"></td>
+							</tr>
+							<tr>
+								<td>Mobile:</td>
+								<td><input type="tel" name="mobile" pattern="[0-9]{10}"></td>
+							</tr>
+							<tr>
+								<td>Email:</td>
+								<td><input type="email" name="email"></td>
+							</tr>
+							<tr>
+								<td>City:</td>
+								<td><select name="city">
+										<option value="">Select</option>
+										<option value="mumbai">Mumbai</option>
+										<option value="pune">Pune</option>
+										<option value="nagpur">Nagpur</option>
+										<option value="kolhapur">Kolhapur</option>
+										<option value="satara">Satara</option>
+										<option value="solapur">Solapur</option>
+								</select></td>
+							</tr>
+							<tr>
+								<td>Password:</td>
+								<td><input type="password" name="pass"></td>
+							</tr>
+	
+							<tr>
+								<td>
+									<input type="submit" value="Update"> &nbsp;
+								</form>
+								</td>
+								<td colspan="2"><form action="backtoadmin" method="get">
+									<input type="submit" value="Back to Admin">
+								</form>
+								</td>
+							</tr>
+	
+						</table>
+						
+					</td>
+			</tr>
+		</table>
+	</body>
+</html>

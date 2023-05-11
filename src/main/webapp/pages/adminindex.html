@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration</title>
+	<style type="text/css">
+        .t1 {
+            width:80%;
+            height:90%;
+            border:2px solid red;
+            align-content: center;
+            align-self: auto;
+            padding:10px;
+			background-color:azure;
+        }
+
+        .t3
+        {
+            padding:10px;
+           
+        }
+
+        .t2
+        {
+            padding:10px;
+            border:2px solid #00CC00;
+			background-color: white;
+        }
+        h3
+        {
+            color: green;
+            font-family:Consolas;
+        }
+        #sub
+        {
+            background-color:#00CC00; 
+            color:white; 
+            border:5px solid #00CC00;
+        }
+        #sub2
+        {
+            background-color:red; 
+            color:white; 
+            border:5px solid #00CC00;
+        }
+    </style>
+</head>
+	<body>
+    <br />
+    <table align="center" class="t1" cellspacing="0">
+		<tr>
+			<td>
+				<br /><br />
+                    <table align="center" class="t2" border="0" cellspacing="0" cellpadding="7">
+                        <tr>
+                            <td colspan="2" align="center" style="background-color: #00cc00; font-size: 24px; color: white; font-family:Consolas">
+                                Registration Form
+                            </td>
+                        </tr>
+                        <tr>
+                            <form action="addnewuser" method="get">
+                            <td>Name:</td>
+                            <td>
+                            	<input type="text" name="name" required pattern="[A-Za-z]{2,30}">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+                            <td>Mobile:</td>
+                            <td>
+                            	<input type="tel" name="mobile" required pattern="[0-9]{10}">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>
+                            	<input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+                            <td>Select City:
+							</td> 
+							<td>
+								<!--<input type="text" name="city">-->
+								<select name="city">
+								<option value="">Select</option>
+									<option value="Mumbai">Mumbai</option>
+									<option value="Pune">Pune</option>
+									<option value="Nagpur">Nagpur</option>
+									<option value="Kolhapur">Kolhapur</option>
+									<option value="Sangali">Sangali</option>
+									<option value="Satara">Satara</option>
+									<option value="Nashik">Nashik</option>
+								</select>
+							</td>
+                        </tr>
+                        <tr>
+                           
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td>
+                            	<input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+                            <td>Confirm Password:</td>
+                            <td>
+                            	<input type="password" name="confirmpassword">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="sub" type="submit" value="Create New"> </form>
+                            </td>
+							<td>
+								<form action="displayuser" method="get"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="">
+										<input id="sub" type="submit" value="Show Users">
+									</a> 
+									<br>
+								</form>
+							</td>
+                        </tr>
+                    </table>
+                
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="t3" align="center" cellspacing="30px">
+                    <tr>
+						
+						<form action="verifyuser" method="get">
+						<td>
+							Enter Email:
+						</td>
+						<td>
+							<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+						</td>
+						<td>
+							<!-- <a href="pages/updateuser.html"> -->
+							<input id="sub" type="submit" value="Update User">
+							
+						</td>
+						</form>
+					</tr>
+					<tr>
+						<form action="deleteuser" method="get">
+						<td>
+							Enter Email:
+						</td>
+						<td>
+							<input type="email" name="email" ">
+						</td>
+						<td>
+							<input id="sub" type="submit" value="Delete User">
+						</td>
+						</form>
+                    </tr>
+                </table>
+			</td>
+		</tr>
+    </table>
+</body>
+</html>

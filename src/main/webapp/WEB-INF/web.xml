@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>03-A-user-registration-using-servlet-mysql-html-css</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>hi</param-name>
+    <param-value>Hello</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>AdminLogin</servlet-name>
+    <servlet-class>com.user.admin.AdminLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLogin</servlet-name>
+    <url-pattern>/adminlogin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>NewUser</servlet-name>
+    <servlet-class>com.user.newuser.NewUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewUser</servlet-name>
+    <url-pattern>/addnewuser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DisplayUser</servlet-name>
+    <servlet-class>com.user.display.DisplayUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayUser</servlet-name>
+    <url-pattern>/displayuser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DeleteUser</servlet-name>
+    <servlet-class>com.user.delete.DeleteUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteUser</servlet-name>
+    <url-pattern>/deleteuser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>VerifyUser</servlet-name>
+    <servlet-class>com.user.update.VerifyUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyUser</servlet-name>
+    <url-pattern>/verifyuser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>com.user.update.UpdateUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/updateuser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BackToAdmin</servlet-name>
+    <servlet-class>com.user.admin.BackToAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BackToAdmin</servlet-name>
+    <url-pattern>/backtoadmin</url-pattern>
+  </servlet-mapping>
+</web-app>
